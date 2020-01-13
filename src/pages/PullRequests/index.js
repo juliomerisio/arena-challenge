@@ -51,7 +51,12 @@ export default function PullRequests() {
                 body,
                 user: { login: creator, avatar_url: avatar },
               }) => (
-                <RepositoryContainer key={id} href={url} target="_blank">
+                <RepositoryContainer
+                  key={id}
+                  href={url}
+                  target="_blank"
+                  data-cy="container"
+                >
                   <RepositoryInfo>
                     <span>
                       <h2>{title}</h2>
